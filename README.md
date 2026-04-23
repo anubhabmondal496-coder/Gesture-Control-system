@@ -1,31 +1,48 @@
-# Mediapipe Hand Magic
+📌 Gesture-Controlled Image Zoom using MediaPipe Tasks API
+🚀 Overview
 
-This repository contains an enhanced MediaPipe hand‑tracking demo that visualises the connections between two hands with:
+This project implements a real-time gesture-based image zoom system using hand tracking.
+By measuring the distance between the thumb tip (landmark 4) and index fingertip (landmark 8), the system dynamically zooms an image in or out—just like a touchscreen pinch gesture, but using only a webcam.
 
-- **Dynamic RGB colour cycling** based on a sinusoidal timer.
-- **Glowing lines** using a blurred overlay for a neon‑like effect.
-- **Particle bursts** that emanate from each landmark connection and fade away.
-- **Trailing effect** that leaves a faint motion trail behind the hands.
-- **Subtle dark gradient background** for better contrast.
+🎯 Features
+🤏 Pinch-to-zoom using hand gestures
+🎥 Real-time hand tracking
+📏 Distance-based dynamic scaling
+⚡ Smooth and responsive interaction
+🧠 Built using latest MediaPipe Tasks API
+🛠️ Tech Stack
+Python
+OpenCV
+NumPy
+MediaPipe Tasks API
+🧠 How It Works
+Webcam captures live video
+Hand landmarks are detected using MediaPipe
+Distance between:
+Thumb tip (4)
+Index fingertip (8)
+Distance is mapped to a scaling factor
+Image is resized dynamically using OpenCV
 
-## Requirements
+⚙️ Installation
+1. Clone the repository
+git clone https://github.com/your-username/gesture-zoom-project.git
+cd gesture-zoom-project
+2. Install dependencies
+pip install -r requirements.txt
+▶️ Usage
+python main.py
+📸 Demo
 
-- Python 3.8+ 
-- `opencv-python` 
-- `mediapipe` (the task‑based version) 
-- `numpy`
+👉 Add your demo video/GIF here
+(Highly recommended for better visibility)
 
-You can install the dependencies with:
-```bash
-pip install opencv-python mediapipe numpy
-```
-
-## Running the demo
-
-```bash
-python joining_both_hands.py
-```
-
-Press **`q`** to quit the window.
-
-Feel free to tweak the configuration constants at the top of the script (`PARTICLE_COUNT`, `TRAIL_DECAY`, `GLOW_KERNEL`, etc.) to customise the visual style.
+⚠️ Requirements
+Webcam
+Python 3.8+
+hand_landmarker.task model file
+🔥 Future Improvements
+🎮 Add gesture-based panning
+🔊 Add gesture-based volume control
+🎨 UI enhancements
+📱 Web-based implementation
